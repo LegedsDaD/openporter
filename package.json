@@ -1,0 +1,66 @@
+{
+  "name": "openporter",
+  "version": "1.1.3",
+  "description": "CLI tool to deploy static websites to GitHub Pages using GitHub Actions",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "bin": {
+    "openporter": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --out-dir dist --clean --dts",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build",
+    "test": "vitest"
+  },
+  "keywords": [
+    "github-pages",
+    "deployment",
+    "cli",
+    "github-actions",
+    "static-site",
+    "vercel-alternative"
+  ],
+  "author": "OpenPorter",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "dependencies": {
+    "@octokit/rest": "^20.1.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "cosmiconfig": "^9.0.0",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^9.2.23",
+    "openporter": "^1.1.3",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint": "^9.15.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LegedsDaD/openporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LegedsDaD/openporter/issues"
+  },
+  "homepage": "https://github.com/LegedsDaD/openporter#readme"
+}
