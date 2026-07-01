@@ -103,8 +103,7 @@ pnpm add -g openporter
 
 ```bash
 openporter --version
-# Output: 1.0.0
-
+# Output: 1.1.4
 openporter --help
 # Shows all available commands
 ```
